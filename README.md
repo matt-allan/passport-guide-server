@@ -6,20 +6,45 @@ Either follow along with the guide to build your own application, or if you woul
 
 ## Setup
 
+1. Clone the repo.
+
 ```
-# Clone the repo.
 git clone git@github.com:matt-allan/passport-guide-server.git
 cd passport-guide-server
-# Install dependencies.
+```
+
+2. Install dependencies.
+
+```
 composer install
-# Copy the example .env file.
+```
+
+3. Copy the example .env file.
+
+```
 cp .env.example .env
-# Generate an app key.
+```
+
+4. Generate an app key.
+
+```
 php artisan key:generate --ansi
-# Create the database. If you prefer a different database use the client of your choice and update the .env.
+```
+
+5. Create the database. If you prefer a different database use the client of your choice and update the .env file accordingly.
+
+```
 mysql -u root -e 'create database passport_server'
-# Migrate the database.
+```
+
+6. Run the migrations.
+
+```
 php artisan migrate
-# Setup the domain. If using something besides Valet like Homestead consult the docs.
+```
+
+7. Setup the domain. If using something besides Valet such as Homestead consult the docs.
+
+```
 valet link passport
 ```
